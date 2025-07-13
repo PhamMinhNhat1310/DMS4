@@ -1,1 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fashion Stylist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <nav>
+            <div class="logo">AI Stylist</div>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#catalog" class="nav-link">Catalog</a></li>
+                <li><a href="#try-on" class="nav-link">Virtual Try-On</a></li>
+                <li><a href="#profile" class="nav-link">Profile</a></li>
+                <li><a href="#login" class="nav-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>Discover Your Perfect Style with AI</h1>
+                <p>Virtually try on clothes and get personalized recommendations.</p>
+                <a href="#catalog" class="cta-button">Browse Styles</a>
+            </div>
+        </section>
+
+        <!-- Login/Sign Up Page -->
+        <section id="login" class="page">
+            <div class="form-container">
+                <form id="login-form">
+                    <h2>Login</h2>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#signup" id="show-signup">Sign Up</a></p>
+                </form>
+
+                <form id="signup-form" style="display: none;">
+                    <h2>Sign Up</h2>
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#login" id="show-login">Login</a></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Catalog Page -->
+        <section id="catalog" class="page">
+            <h2>Our Clothing Catalog</h2>
+            <div class="catalog-grid">
+                <!-- Sample Product -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Clothing item">
+                    <h3>Classic Blue T-Shirt</h3>
+                    <p>$25.00</p>
+                    <button>Try On</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Clothing item">
+                    <h3>Summer Dress</h3>
+                    <p>$75.00</p>
+                    <button>Try On</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Clothing item">
+                    <h3>Formal Blazer</h3>
+                    <p>$120.00</p>
+                    <button>Try On</button>
+                </div>
+                <!-- More products would be added here dynamically -->
+            </div>
+        </section>
+
+        <!-- Virtual Try-On Page -->
+        <section id="try-on" class="page">
+            <h2>Virtual Try-On</h2>
+            <div class="try-on-container">
+                <div class="upload-section">
+                    <h3>Upload Your Photo</h3>
+                    <input type="file" id="user-photo" accept="image/*">
+                    <p>Select a clothing item from the catalog to see it on you.</p>
+                </div>
+                <div class="try-on-result">
+                    <h3>Result</h3>
+                    <div id="result-image-container">
+                        <p>Your try-on result will appear here.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Page -->
+        <section id="profile" class="page">
+            <h2>User Profile</h2>
+            <form id="profile-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="height">Height (cm):</label>
+                <input type="number" id="height" name="height">
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight">
+
+                <label for="style-preference">Style Preference:</label>
+                <select id="style-preference" name="style-preference">
+                    <option value="casual">Casual</option>
+                    <option value="formal">Formal</option>
+                    <option value="sporty">Sporty</option>
+                    <option value="bohemian">Bohemian</option>
+                </select>
+
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 AI Fashion Stylist. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
