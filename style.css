@@ -47,12 +47,12 @@ nav {
     height: 70px;
 }
 
-.logo {
+/* .logo {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--dark-color);
     text-decoration: none;
-}
+} */
 
 .nav-links {
     display: flex;
