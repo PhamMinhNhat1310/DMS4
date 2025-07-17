@@ -3,149 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Fashion Stylist</title>
+    <title>Mind Council - Assemble Your AI Advisory Board</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <!-- In your index.html -->
-        <nav>
-            <div class="logo">
-                <!-- WRAP THE SVG IN THIS LINK -->
-                <a href="#home" class="nav-link">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488.6 373.58" width="80" height="auto">
-                      <defs>
-                        <style>
-                          .cls-1 {
-                            fill: #5b21b6;
-                            stroke-width: 0px;
-                          }
-                        </style>
-                      </defs>
-                      <path class="cls-1" d="m480.88,373.58c-4.26,0-7.72-3.45-7.72-7.72,0-32.86-15.73-59.09-46.76-77.95-23.93-14.54-48.37-19.07-48.61-19.11-4.19-.76-6.98-4.76-6.23-8.96.75-4.19,4.74-6.99,8.94-6.24,1.08.19,108.1,20.3,108.1,112.25,0,4.26-3.45,7.72-7.72,7.72Z"/>
-                      <path class="cls-1" d="m205.69,333.57c-39.9,0-72.36-32.46-72.36-72.35s32.46-72.36,72.36-72.36,72.35,32.46,72.35,72.36-32.46,72.35-72.35,72.35Zm0-129.28c-31.39,0-56.92,25.54-56.92,56.92s25.54,56.92,56.92,56.92,56.92-25.53,56.92-56.92-25.53-56.92-56.92-56.92Z"/>
-                      <path class="cls-1" d="m289.22,333.58c-39.9,0-72.36-32.46-72.36-72.36s32.46-72.36,72.36-72.36c37.29,0,68.08,28.35,71.95,64.64h14.09c14.81-20.34,97.76-139.06,97.76-245.7,0-4.26,3.45-7.72,7.72-7.72s7.72,3.45,7.72,7.72c0,51.26-17.39,110.32-51.68,175.51-25.41,48.3-50.44,81.22-51.5,82.59-1.46,1.91-3.73,3.03-6.13,3.03h-25.29c-4.26,0-7.72-3.45-7.72-7.72,0-31.39-25.54-56.92-56.92-56.92s-56.92,25.54-56.92,56.92,25.54,56.93,56.92,56.93c4.26,0,7.72,3.45,7.72,7.72s-3.45,7.72-7.72,7.72Z"/>
-                      <path class="cls-1" d="m211.07,373.51H7.72c-3.11,0-5.91-1.86-7.11-4.73s-.57-6.17,1.6-8.39c1.85-1.88,184.45-190.26,184.45-352.67,0-4.26,3.45-7.72,7.72-7.72s7.72,3.45,7.72,7.72c0,71.05-31.85,153.89-94.66,246.2-32.28,47.43-64.89,85.27-81.99,104.16h185.64c4.26,0,7.72,3.45,7.72,7.72s-3.45,7.72-7.72,7.72Z"/>
-                    </svg>
-                </a>
-            </div>
-            <ul>
-                <!-- <li><a href="#home" class="nav-link">Home</a></li> -->
-                <li><a href="#catalog" class="nav-link">Catalog</a></li>
-                <li><a href="#try-on" class="nav-link">Virtual Try-On</a></li>
-                <li><a href="#profile" class="nav-link">Profile</a></li>
-                <li><a href="#login" class="nav-link">Login</a></li>
+        <nav class="container">
+            <a href="#" class="logo">Mind Council</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#personas">Personas</a></li>
+                <li><a href="#cta">Sign Up</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Home Page -->
-        <section id="home" class="page active">
-            <div class="hero">
-                <h1>Discover Your Perfect Style with AI</h1>
-                <p>Virtually try on clothes and get personalized recommendations.</p>
-                <a href="#catalog" class="cta-button">Browse Styles</a>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-content">
+                <h1>Assemble Your AI-Powered Mind Council</h1>
+                <p>Don't face complex problems alone. Build a team of specialized AI personas to analyze, debate, and co-create the perfect solution with you.</p>
+                <a href="#cta" class="btn btn-primary">Create Your Council Today</a>
             </div>
         </section>
 
-        <!-- Login/Sign Up Page -->
-        <section id="login" class="page">
-            <div class="form-container">
-                <form id="login-form">
-                    <h2>Login</h2>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit">Login</button>
-                    <p>Don't have an account? <a href="#signup" id="show-signup">Sign Up</a></p>
-                </form>
-
-                <form id="signup-form" style="display: none;">
-                    <h2>Sign Up</h2>
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit">Sign Up</button>
-                    <p>Already have an account? <a href="#login" id="show-login">Login</a></p>
-                </form>
-            </div>
-        </section>
-
-        <!-- Catalog Page -->
-        <section id="catalog" class="page">
-            <h2>Our Clothing Catalog</h2>
-            <div class="catalog-grid">
-                <!-- Sample Product -->
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400" alt="Clothing item">
-                    <h3>Classic Blue T-Shirt</h3>
-                    <p>$25.00</p>
-                    <button>Try On</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400" alt="Clothing item">
-                    <h3>Summer Dress</h3>
-                    <p>$75.00</p>
-                    <button>Try On</button>
-                </div>
-                <div class="product-card">
-                    <img src="https://via.placeholder.com/300x400" alt="Clothing item">
-                    <h3>Formal Blazer</h3>
-                    <p>$120.00</p>
-                    <button>Try On</button>
-                </div>
-                <!-- More products would be added here dynamically -->
-            </div>
-        </section>
-
-        <!-- Virtual Try-On Page -->
-        <section id="try-on" class="page">
-            <h2>Virtual Try-On</h2>
-            <div class="try-on-container">
-                <div class="upload-section">
-                    <h3>Upload Your Photo</h3>
-                    <input type="file" id="user-photo" accept="image/*">
-                    <p>Select a clothing item from the catalog to see it on you.</p>
-                </div>
-                <div class="try-on-result">
-                    <h3>Result</h3>
-                    <div id="result-image-container">
-                        <p>Your try-on result will appear here.</p>
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2>Why Mind Council?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Diverse Perspectives</h3>
+                        <p>Craft a team of AI experts—from strategists to innovators—to gain a 360-degree view of any challenge.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Collaborative Chat</h3>
+                        <p>Engage in dynamic, real-time conversations where your AI council members build on each other's ideas to forge robust solutions.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Eliminate Blind Spots</h3>
+                        <p>Leverage AI personas like "The Devil's Advocate" to challenge assumptions and uncover risks you might have missed.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Profile Page -->
-        <section id="profile" class="page">
-            <h2>User Profile</h2>
-            <form id="profile-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="how-it-works-section">
+            <div class="container">
+                <h2>Three Steps to Better Decisions</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Create Your Personas</h3>
+                        <p>Define the experts you need. Customize their skills, personality, and problem-solving style.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Present Your Problem</h3>
+                        <p>Initiate a new chat session, select your council members, and describe the challenge you're facing.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Co-Create the Solution</h3>
+                        <p>Watch as your council debates and collaborates. Guide the conversation and synthesize the optimal path forward.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <label for="height">Height (cm):</label>
-                <input type="number" id="height" name="height">
-
-                <label for="weight">Weight (kg):</label>
-                <input type="number" id="weight" name="weight">
-
-                <label for="style-preference">Style Preference:</label>
-                <select id="style-preference" name="style-preference">
-                    <option value="casual">Casual</option>
-                    <option value="formal">Formal</option>
-                    <option value="sporty">Sporty</option>
-                    <option value="bohemian">Bohemian</option>
-                </select>
-
-                <button type="submit">Save Profile</button>
-            </form>
+        <!-- Personas Section -->
+        <section id="personas" class="personas-section">
+            <div class="container">
+                <h2>Meet Some of the Archetypes</h2>
+                <div class="personas-grid">
+                    <div class="persona-card">
+                        <h4>The Strategist</h4>
+                        <p>Focuses on long-term goals, planning, and competitive analysis.</p>
+                    </div>
+                    <div class="persona-card">
+                        <h4>The Innovator</h4>
+                        <p>Generates creative, out-of-the-box ideas and disruptive solutions.</p>
+                    </div>
+                    <div class="persona-card">
+                        <h4>The Devil's Advocate</h4>
+                        <p>Stress-tests every idea by identifying potential flaws and risks.</p>
+                    </div>
+                    <div class="persona-card">
+                        <h4>The Customer Advocate</h4>
+                        <p>Views the problem through the eyes of your end-users and customers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <h2>Ready to Overcome Your Biggest Challenges?</h2>
+                <p>Sign up for our private beta and be the first to build your own Mind Council.</p>
+                <form class="signup-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Request Early Access</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Lookai. All rights reserved.</p>
+        <div class="container">
+            <p>© 2025 Mind Council. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
