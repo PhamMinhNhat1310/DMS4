@@ -1,64 +1,46 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const pages = document.querySelectorAll('.page');
-    const showSignup = document.getElementById('show-signup');
-    const showLogin = document.getElementById('show-login');
-    const loginForm = document.getElementById('login-form');
-    const signupForm = document.getElementById('signup-form');
+document.addEventListener('DOMContentLoaded', () => {
 
-    // Function to switch between pages
-    function showPage(pageId) {
-        pages.forEach(page => {
-            page.classList.remove('active');
-        });
-        document.getElementById(pageId).classList.add('active');
-    }
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('.nav-links a');
 
-    // Navigation link click handler
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
-            const pageId = this.getAttribute('href').substring(1);
-            showPage(pageId);
+            const targetId = e.target.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
 
-    // Show sign-up form
-    showSignup.addEventListener('click', function(e) {
-        e.preventDefault();
-        loginForm.style.display = 'none';
-        signupForm.style.display = 'block';
+    // Fade-in effect on scroll
+    const sections = document.querySelectorAll('section');
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(section);
     });
 
-    // Show login form
-    showLogin.addEventListener('click', function(e) {
-        e.preventDefault();
-        signupForm.style.display = 'none';
-        loginForm.style.display = 'block';
-    });
-    
-    // Handle login form submission
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Login functionality to be implemented in the backend.');
-        // Here you would typically send data to your Python backend
-    });
-
-    // Handle sign-up form submission
-    signupForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Sign-up functionality to be implemented in the backend.');
-        // Here you would typically send data to your Python backend
-    });
-
-    // Handle profile form submission
-    const profileForm = document.getElementById('profile-form');
-    profileForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Profile saved!');
-        // Here you would send profile data to the backend
-    });
-
-    // Set the default page to be the home page
-    showPage('home');
 });
