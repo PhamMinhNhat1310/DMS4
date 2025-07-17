@@ -62,9 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(`${key}: ${value}`);
             }
             // You can now send this data to a server or store it
-            alert('Persona Created Successfully! (Check the console for data)');
-            // Optionally, redirect to a "dashboard" page
-            // window.location.href = '/dashboard.html';
+               // --- NEW CODE ---
+                // Redirect to the new chat page
+                window.location.href = 'chat.html';
+                // --- END NEW CODE ---
 
         } else {
             // Move to the next step
