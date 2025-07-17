@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Persona - Sonorai</title>
+    <link rel="stylesheet" href="creation.css">
+</head>
+<body>
+
+    <div class="wizard-container">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <form id="persona-form" class="persona-form">
+            <!-- Progress Bar -->
+            <div class="progress-bar">
+                <div class="progress-bar-fill" style="width: 25%;"></div>
+            </div>
+
+            <!-- Step 1: Persona Name -->
+            <div class="form-step active">
+                <div class="step-content">
+                    <h2>First, what is your persona's name?</h2>
+                    <p>This could be a name like "Ava" or a title like "The Strategic Analyst."</p>
+                    <input type="text" name="personaName" placeholder="e.g., The Innovator" required>
+                </div>
+            </div>
+
+            <!-- Step 2: Persona Core Drive -->
+            <div class="form-step">
+                <div class="step-content">
+                    <h2>What is this persona's primary goal?</h2>
+                    <p>Select the core drive that best defines their purpose.</p>
+                    <div class="dropdown-group">
+                        <label for="goal-setting">Goal Setting & Achievement</label>
+                        <select id="goal-setting" name="goal-setting">
+                            <option value="Defining clear objectives">Defining clear objectives</option>
+                            <option value="Creating actionable plans">Creating actionable plans</option>
+                            <option value="Tracking progress and milestones">Tracking progress and milestones</option>
+                            <option value="Motivating action and persistence">Motivating action and persistence</option>
+                            <option value="Celebrating successes">Celebrating successes</option>
+                        </select>
+                    </div>
+                    <div class="dropdown-group">
+                        <label for="problem-solving">Problem Solving & Analysis</label>
+                        <select id="problem-solving" name="problem-solving">
+                            <option value="Identifying root causes">Identifying root causes</option>
+                            <option value="Generating creative solutions">Generating creative solutions</option>
+                            <option value="Evaluating pros and cons">Evaluating pros and cons</option>
+                            <option value="Making logical deductions">Making logical deductions</option>
+                            <option value="Thinking critically">Thinking critically</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Persona Emotional Tone -->
+            <div class="form-step">
+                 <div class="step-content">
+                    <h2>How does this persona communicate?</h2>
+                    <p>Choose the emotional tone that fits them best.</p>
+                     <div class="dropdown-group">
+                        <label for="tone-analytical">Analytical & Objective</label>
+                        <select id="tone-analytical" name="tone-analytical">
+                            <option value="Data-driven and factual">Data-driven and factual</option>
+                            <option value="Logical and rational">Logical and rational</option>
+                            <option value="Impartial and unbiased">Impartial and unbiased</option>
+                            <option value="Questioning and skeptical">Questioning and skeptical</option>
+                            <option value="Precise and detailed">Precise and detailed</option>
+                        </select>
+                    </div>
+                     <div class="dropdown-group">
+                        <label for="tone-supportive">Supportive & Empathetic</label>
+                        <select id="tone-supportive" name="tone-supportive">
+                            <option value="Encouraging and optimistic">Encouraging and optimistic</option>
+                            <option value="Understanding and compassionate">Understanding and compassionate</option>
+                            <option value="Patient and calm">Patient and calm</option>
+                            <option value="Collaborative and inclusive">Collaborative and inclusive</option>
+                            <option value="Constructive and helpful">Constructive and helpful</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Summary -->
+            <div class="form-step">
+                <div class="step-content">
+                    <h2>Your new persona is ready!</h2>
+                    <p>Review the details below. You can go back to make changes or create your persona now.</p>
+                    <div id="summary-content" class="summary">
+                        <!-- Summary will be populated by JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="form-navigation">
+                <button type="button" class="btn-secondary" id="back-btn" style="display: none;">Back</button>
+                <button type="button" class="btn-primary" id="next-btn">Next</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="creation.js"></script>
+</body>
+</html>
