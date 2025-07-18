@@ -106,9 +106,14 @@ section.chat-window {
     margin: 0;
 }
 
-/* Persona & System Messages */
-.persona-message, .system-message {
+/* Keep the persona message on the left */
+.persona-message {
     align-self: flex-start;
+}
+
+/* Give the system message its own rule to be centered */
+.system-message {
+    align-self: center;
 }
 
 .persona-message .message {
