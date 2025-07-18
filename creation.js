@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Function to generate the summary
+        // Generate summary
     const generateSummary = () => {
         const summaryContent = document.getElementById('summary-content');
         const formData = new FormData(form);
@@ -96,12 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
         let summaryHTML = `<h4>${formData.get('personaName') || 'Unnamed Persona'}</h4>`;
         
         summaryHTML += `
-            <p><strong>Core Drive (Goals):</strong> ${formData.get('goal-setting')}</p>
-            <p><strong>Core Drive (Problem Solving):</strong> ${formData.get('problem-solving')}</p>
-            <p><strong>Tone (Analytical):</strong> ${formData.get('tone-analytical')}</p>
-            <p><strong>Tone (Supportive):</strong> ${formData.get('tone-supportive')}</p>
+            <p><strong>Core Drive:</strong> ${formData.get('goal-setting')}</p>
+            <p><strong>Tone:</strong> ${formData.get('tone-analytical')}</p>
         `;
-
+    
         summaryContent.innerHTML = summaryHTML;
     };
 
