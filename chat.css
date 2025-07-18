@@ -73,7 +73,7 @@ body {
 
 
 /* Chat Window */
-.chat-window {
+section.chat-window {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
