@@ -78,6 +78,7 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--secondary-color);
+    padding: 0;
 }
 
 .chat-messages {
