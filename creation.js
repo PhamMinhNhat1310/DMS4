@@ -55,24 +55,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Logic for final step (submission)
         if (currentStep === updateTotalSteps - 1) {
-            // This is the final "Create Persona" click
+            // --- NEW CODE ---
+            // Disable the button to prevent multiple clicks
+            nextBtn.disabled = true;
+            nextBtn.textContent = 'Saving...';
+
             const formData = new FormData(form);
-            console.log('Form Submitted!');
-            for (let [key, value] of formData.entries()) {
-                console.log(`${key}: ${value}`);
-            }
-            // You can now send this data to a server or store it
-               // --- NEW CODE ---
-                // Redirect to the new chat page
-                window.location.href = 'chat.html';
-                // --- END NEW CODE ---
+
+            // Use the Fetch API to send data to the PHP script
+            fetch('save_persona.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // If saving was successful, redirect to the chat page
+                    window.location.href = 'chat.html';
+                } else {
+                    // If there was an error, alert the user and re-enable the button
+                    alert('Error: ' + data.message);
+                    nextBtn.disabled = false;
+                    nextBtn.textContent = 'Create Persona';
+                }
+            })
+            .catch(error => {
+                // Handle network errors
+                console.error('Error:', error);
+                alert('A network error occurred. Please try again.');
+                nextBtn.disabled = false;
+                nextBtn.textContent = 'Create Persona';
+            });
+            // --- END NEW CODE ---
 
         } else {
             // Move to the next step
             if (currentStep < updateTotalSteps - 1) {
                 currentStep++;
-                // If the next step is the summary, generate it
-                if (currentStep === updateTotalSteps - 1) { // Adjusted the index for summary generation
+                if (currentStep === updateTotalSteps - 1) {
                     generateSummary();
                 }
                 updateFormSteps();
